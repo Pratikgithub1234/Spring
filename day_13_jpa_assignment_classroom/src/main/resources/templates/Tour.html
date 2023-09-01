@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/new_tour}" th:object="${mytour}" method="post">
+    <table border="1">
+        <tr>
+            <td>Enter Tour Name</td>
+            <td><input type="text" th:field="*{tourName}" /></td>
+        </tr>
+        <tr>
+            <td>Enter Tour Type</td>
+            <td><input type="text" th:field="*{tourType}" /></td>
+        </tr>
+        <tr>
+			<tr>
+            <td>Enter Tour Cost</td>
+            <td><input type="text" th:field="*{cost}" /></td>
+        </tr>
+            <td><input type="submit" value="Submit" /></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
